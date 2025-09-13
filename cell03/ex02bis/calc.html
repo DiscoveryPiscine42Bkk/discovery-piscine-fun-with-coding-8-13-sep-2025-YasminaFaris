@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h2>Basic Calculator</h2>
+    <input type="text" id="left" placeholder="Left number">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="right" placeholder="Right number">
+    <input type="submit" id="btn" value="Try me!">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            function calculate() {
+                const left = $("#left").val();
+                const right = $("#right").val();
+                const op = $("#operator").val();
+
+                const a = Number(left);
+                const b = Number(right);
+
+                if (!Number.isInteger(a) || !Number.isInteger(b) || a < 0 || b < 0) {
+                    alert("Error :(");
+                    return;
+                }
+
+                if ((op === "/" || op === "%") && b === 0) {
+                    alert("It’s over 9000!");
+                    console.log("It’s over 9000!");
+                    return;
+                }
+
+                let result;
+                switch(op) {
+                    case "+": result = a + b; break;
+                    case "-": result = a - b; break;
+                    case "*": result = a * b; break;
+                    case "/": result = a / b; break;
+                    case "%": result = a % b; break;
+                }
+
+                alert("Result: " + result);
+                console.log("Result: " + result);
+            }
+
+            $("#btn").click(calculate);
+
+            setInterval(function() {
+                alert("Please, use me...");
+            }, 30000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+            background-color:rgb(104, 84, 62);
+        }
+        button {
+            background-color: brown;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+        #ft_list {
+            margin-top: 20px;
+        }
+        #ft_list div {
+            background: #ffffff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+        #ft_list div:hover {
+            background: #f5f8cd;
+        }
+    </style>
+</head>
+<body>
+    <button id="newBtn">New</button>
+    <div id="ft_list"></div>
+
+    <script src="todo.js"></script>
+</body>
+</html>

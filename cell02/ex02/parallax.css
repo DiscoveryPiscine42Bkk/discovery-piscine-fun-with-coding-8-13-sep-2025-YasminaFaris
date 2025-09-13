@@ -1,0 +1,37 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px black;
+}
+
+.img1 {
+    background-image: url("https://cdn.prod.website-files.com/63a02e61e7ffb565c30bcfc7/677f6b79238ac2aab548cad8_645f7ecbc592fff7671dbcfc_Landscape%2520Gardening%2520three.jpeg");
+}
+.img2 {
+    background-image: url("https://cdn.prod.website-files.com/63a02e61e7ffb565c30bcfc7/677f6b79238ac2aab548caac_645f2ec45a0001a9b5defc0e_Inexpensive%2520Raised%2520Garden%2520Bed%2520Ideas%2520five.jpeg");
+}
+
+.content {
+    background-color: black;
+    color: white;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
